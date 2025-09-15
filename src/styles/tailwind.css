@@ -8,11 +8,11 @@
 @theme {
   /* Her tilføjes theme variable // tokens */
 
-  --brand-color: #eb9d1f;
-  --primary-col: #0d2732;
-  --secondary-col: #68c096;
-  --white: #ffffff;
-  --black: #000000;
+  --color-brandcolor: #eb9d1f;
+  --color-primarycol: #0d2732;
+  --color-secondarycol: #68c096;
+  --color-white: #ffffff;
+  --color-black: #000000;
 }
 
 @layer base {

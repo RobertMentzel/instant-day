@@ -1,5 +1,82 @@
 ---
+const pathname = new URL(Astro.request.url).pathname;
+const currentPath = pathname.slice(1); // remove the first "/"
+import "../styles/tailwind.css";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<header x-data="{ showmenu: false }" class="text-primarycol">
+  <div
+    id="navbar"
+    class="container mx-auto p-4 flex flex-row justify-between items-center"
+  >
+    <div id="logo" class="">
+      <a href="" class="font-display text-4xl">INSTANT DAY</a>
+    </div>
+    <nav id="desktopmenu" class="hidden lg:block">
+      <ul class="flex flex-row gap-4">
+        <li class="border-2 border-primarycol p-3 px-9">
+          <a href="/" class={currentPath === "" ? "font-bold " : ""}>home</a>
+        </li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
+        <li class="border-2 border-primarycol p-3 px-9">
+          <a href="/info/" class={currentPath === "info/" ? "font-bold" : ""}
+            >info</a
+          >
+        </li>
+        <li class="border-2 border-primarycol p-3 px-9">
+          <a
+            href="/gallery/"
+            class={currentPath === "gallery/" ? "font-bold" : ""}>gallery</a
+          >
+        </li>
+        <li class="border-2 border-primarycol p-3 px-9">
+          <a href="/share/" class={currentPath === "share/" ? "font-bold" : ""}
+            >share</a
+          >
+        </li>
+        <li class="border-2 border-primarycol p-3">
+          <a
+            href="/contributions/"
+            class={currentPath === "contributions/" ? "font-bold" : ""}
+            >contributions</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
+      >Menu</button
+    >
+  </div>
+  <nav
+    id="mobilmenu"
+    class="flex flex-col content-center"
+    x-show="showmenu"
+    x-transition
+    x-on:click="showmenu = false"
+    x-on:click.outside="showmenu = false"
+  >
+    <ul class="border-t-2 border-b-2 border-black">
+      <li class="text-center py-2">
+        <a href="/" class={currentPath === "" ? "font-bold" : ""}>home</a>
+      </li>
+      <li class="text-center py-2">
+        <a href="/lyt/" class={currentPath === "lyt/" ? "font-bold" : ""}
+          >info</a
+        >
+      </li>
+      <li class="text-center py-2">
+        <a href="/live/" class={currentPath === "live/" ? "font-bold" : ""}
+          >gallery</a
+        >
+      </li>
+      <li class="text-center py-2">
+        <a href="/om/" class={currentPath === "om/" ? "font-bold" : ""}>share</a
+        >
+        <li class="text-center py-2">
+          <a href="/om/" class={currentPath === "om/" ? "font-bold" : ""}
+            >contributions</a
+          >
+        </li>
+      </li>
+    </ul>
+  </nav>
+</header>
