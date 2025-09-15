@@ -7,13 +7,12 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
-  :root {
-    --brand-color: #eb9d1f;
-    --primary-col: #0d2732;
-    --secondary-col: #68c096;
-    --white: #ffffff;
-    --black: #000000;
-  }
+
+  --brand-color: #eb9d1f;
+  --primary-col: #0d2732;
+  --secondary-col: #68c096;
+  --white: #ffffff;
+  --black: #000000;
 
   h1,
   h2,
