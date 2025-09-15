@@ -7,6 +7,67 @@
 
 @theme {
   /* Her tilføjes theme variable // tokens */
+  :root {
+    --brand-color: #eb9d1f;
+    --primary-col: #0d2732;
+    --secondary-col: #68c096;
+    --white: #ffffff;
+    --black: #000000;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Lemon", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  p {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 18px;
+  }
+  a {
+    font-family: "Inria Sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  .cta-tekst {
+    font-size: 16px;
+  }
+
+  @media (min-width: 800px) {
+    p {
+      font-size: clamp(16px, 2vw, 18px);
+    }
+    h1 {
+      font-size: clamp(36px, 6vw, 48px);
+    }
+    h2 {
+      font-size: clamp(24px, 4vw, 32px);
+    }
+    h3 {
+      font-size: clamp(18px, 3vw, 24px);
+    }
+    .cta-tekst {
+      font-size: clamp(28px, 5vw, 36px);
+    }
+    .nav-bar-tekst {
+      font-size: clamp(18px, 2vw, 24px);
+    }
+  }
 }
 
 @layer base {
