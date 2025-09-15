@@ -3,14 +3,46 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
-import thumbsup from "../assets/images/thumbsup.png";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import '../styles/tailwind.css';
 ---
 <MainLayout title="About">
-	<article>
-		<h1>INFO</h1>
-		<Button>Klik!</Button>
-		<p>Link til <Link href="https://www.kea.dk" target="_blank">En anden side</Link></p>
-		<Image src={thumbsup} alt=""></Image>
+	<article class="min-h-screen bg-cover bg-center bg-no-repeat"style="background-image: url('/about-bg.jpg')">
+		<section class="grid md:grid-cols-2 md:grid-rows-2">
+			<div class="bg-red-400 border-2 border-y-purple-500 border-x-red-400 md:border-purple-500 md:row-span-2">
+				<h1 class="p-12 text-right">INFO</h1>
+				<h3 class="pb-4 px-6 lg:px-18">Who are we?</h3>
+				<p class="px-6 lg:px-18">Instant Day is a small project run by a couple of lecturers from the Multimedia Design programme at EK - Business Academy Copenhagen. Instant Day is a bi-annual project where lecturers and students collaborate on a digital design and communication project related to the Instant Day competition (this website). In essence, we just want to promote instant photography and have fun while doing it. Cheers.</p>
+				<img src="/about-img-1.webp" alt="Instant billede" class="py-20 mx-auto">
+			</div>
+			<div>
+				<img src="/about-img-2.webp" alt="Instant billede" class="py-22 mx-auto">
+			</div>
+			<div class="bg-red-200 border-2 border-y-yellow-500 border-x-red-200 py-20 md:border-yellow-500">
+				<h3 class="pb-4 px-6 lg:px-18">The judges</h3>
+				<p class="px-6 lg:px-18">Submissions will be reviewed by:</p>
+					<ul class="px-10 list-disc lg:px-22">
+					<li>Jonas Hasle (Assistant lecturer, Multimedia Design programme at EK)</li>
+					<li>Anders Dollerup (Associate lecturer, Multimedia Design programme at EK)</li>
+					<li>Birgitte Heide (Associate lecturer, Multimedia Design programme at EK)</li>
+					<li>Stefan Grage (Associate lecturer, Multimedia Design programme at EK)</li>
+					<li>Students on the Digital Design Elective on the Multimedia Design programme at KEA</li>
+				</ul>
+			</div> 
+		</section>
+		<div>
+			<h1 class="bg-green-500">markise her</h1>
+		</div>
+
+		<section class="grid md:grid-cols-5">
+			<div class="md:col-span-2">
+				<img src="/about-img-3.webp" alt="Instant billede" class="py-22 mx-auto">
+			</div>
+			<div class="bg-red-200 border-2 border-y-purple-500 border-x-red-200 py-20 md:border-purple-500 md:col-span-3 md:mr-20 md:mb-20">
+				<h3 class="pb-4 px-6 lg:px-18">Sponsors</h3>
+				<p class="px-6 lg:px-18">Instant Day is not affiliated to any companies within the Instant Photography industry. The only organisation backing us is EK - Business Academy Copenhagen. At least so far;-) [Link/logo til EK?] SE</p>
+			</div>
+		</section>
 	</article>
 </MainLayout>
