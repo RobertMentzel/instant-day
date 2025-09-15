@@ -13,7 +13,16 @@
   --secondary-col: #68c096;
   --white: #ffffff;
   --black: #000000;
+}
 
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
   h1,
   h2,
   h3 {
@@ -66,16 +75,6 @@
     .nav-bar-tekst {
       font-size: clamp(18px, 2vw, 24px);
     }
-  }
-}
-
-@layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
   }
 }
 
