@@ -4,7 +4,7 @@ const currentPath = pathname.slice(1); // remove the first "/"
 import "../styles/tailwind.css";
 ---
 
-<header x-data="{ showmenu: false }" class="text-primarycol">
+<header x-data="{ showmenu: false }" class="text-primarycol bg-transparent">
   <div
     id="navbar"
     class="container mx-auto p-4 flex flex-row justify-between items-center"
@@ -12,28 +12,38 @@ import "../styles/tailwind.css";
     <div id="logo" class="">
       <a href="" class="font-display text-4xl">INSTANT DAY</a>
     </div>
-    <nav id="desktopmenu" class="hidden lg:block">
+    <nav id="desktopmenu" class="hidden lg:block bg-10-primarycol">
       <ul class="flex flex-row gap-4">
-        <li class="border-2 border-primarycol p-3 px-9">
+        <li
+          class="border-2 border-primarycol p-3 px-9 bg-brandcolor hover:bg-primarycol hover:text-white"
+        >
           <a href="/" class={currentPath === "" ? "font-bold " : ""}>home</a>
         </li><!-- alternativt: lav et <a href="">Link</a>, hvis du ikke vil bruge Link.astro komponenten -->
-        <li class="border-2 border-primarycol p-3 px-9">
+        <li
+          class="border-2 border-primarycol p-3 px-9 bg-brandcolor hover:bg-primarycol hover:text-white"
+        >
           <a href="/info/" class={currentPath === "info/" ? "font-bold" : ""}
             >info</a
           >
         </li>
-        <li class="border-2 border-primarycol p-3 px-9">
+        <li
+          class="border-2 border-primarycol p-3 px-9 bg-brandcolor hover:bg-primarycol hover:text-white"
+        >
           <a
             href="/gallery/"
             class={currentPath === "gallery/" ? "font-bold" : ""}>gallery</a
           >
         </li>
-        <li class="border-2 border-primarycol p-3 px-9">
+        <li
+          class="border-2 border-primarycol p-3 px-9 bg-brandcolor hover:bg-primarycol hover:text-white"
+        >
           <a href="/share/" class={currentPath === "share/" ? "font-bold" : ""}
             >share</a
           >
         </li>
-        <li class="border-2 border-primarycol p-3">
+        <li
+          class="border-2 border-primarycol p-3 bg-brandcolor hover:bg-primarycol hover:text-white"
+        >
           <a
             href="/contributions/"
             class={currentPath === "contributions/" ? "font-bold" : ""}
