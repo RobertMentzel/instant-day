@@ -52,8 +52,10 @@ import "../styles/tailwind.css";
         </li>
       </ul>
     </nav>
-    <button id="burgermenu" class="lg:hidden" x-on:click="showmenu = ! showmenu"
-      >Menu</button
+    <button
+      id="burgermenu"
+      class="lg:hidden bg-brandcolor border-2 border-primarycol p-3 px-9"
+      x-on:click="showmenu = ! showmenu">Menu</button
     >
   </div>
   <nav
@@ -64,24 +66,34 @@ import "../styles/tailwind.css";
     x-on:click="showmenu = false"
     x-on:click.outside="showmenu = false"
   >
-    <ul class="border-t-2 border-b-2 border-black">
-      <li class="text-center py-2">
+    <ul class="border-t-2 border-b-2 bg-brandcolor">
+      <li
+        class="text-center py-2 border-t-2 border-primarycol hover:bg-primarycol hover:text-white"
+      >
         <a href="/" class={currentPath === "" ? "font-bold" : ""}>home</a>
       </li>
-      <li class="text-center py-2">
+      <li
+        class="text-center py-2 border-t-2 border-primarycol hover:bg-primarycol hover:text-white"
+      >
         <a href="/lyt/" class={currentPath === "lyt/" ? "font-bold" : ""}
           >info</a
         >
       </li>
-      <li class="text-center py-2">
+      <li
+        class="text-center py-2 border-t-2 border-primarycol hover:bg-primarycol hover:text-white"
+      >
         <a href="/live/" class={currentPath === "live/" ? "font-bold" : ""}
           >gallery</a
         >
       </li>
-      <li class="text-center py-2">
+      <li
+        class="text-center py-2 border-t-2 border-primarycol hover:bg-primarycol hover:text-white"
+      >
         <a href="/om/" class={currentPath === "om/" ? "font-bold" : ""}>share</a
         >
-        <li class="text-center py-2">
+        <li
+          class="text-center py-2 border-t-2 border-primarycol hover:bg-primarycol hover:text-white"
+        >
           <a href="/om/" class={currentPath === "om/" ? "font-bold" : ""}
             >contributions</a
           >
