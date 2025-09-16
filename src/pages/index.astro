@@ -9,17 +9,29 @@ import Marquee from "../components/marquee.astro";
 ---
 
 <MainLayout title="Instant Day">
-  <div
-    class="min h-screen bg-primarycol grid-cols-2 md:grid-cols-12 md:grid-rows-8"
-  >
-    <Marquee />
-    <Marquee />
-    <Marquee />
-    <Marquee />
-    <Marquee />
-    <Marquee />
-    <Marquee />
-    <Marquee />
-    <Marquee />
+  <div class="min h-screen bg-primarycol relative">
+    <div
+      class="absolute top-0 left-0 w-full flex flex-col items-center lg:flex-row lg:justify-center lg:gap-6 p-4"
+    >
+      <img src="/forside1.png" alt="billede 1" class="w-80 mx-auto lg:mx-0" />
+
+      <img src="/forside2.png" alt="billede 2" class="w-80 hidden lg:block" />
+      <img src="/forside3.png" alt="billede 3" class="w-80 hidden lg:block" />
+    </div>
+    <div class="">
+      <Marquee />
+      <Marquee />
+      <Marquee />
+      <Marquee />
+      <Marquee />
+      <Marquee />
+      <Marquee />
+      <Marquee />
+      <Marquee />
+      <Marquee />
+      <Marquee />
+    </div>
+    <h2 class="text-center p-10 text-white">Learn more about</h2>
+    <p class="text-6xl md:text-8xl text-brandcolor text-center">INSTANT DAY</p>
   </div>
 </MainLayout>
