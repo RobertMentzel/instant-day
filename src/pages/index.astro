@@ -34,13 +34,15 @@ import Marquee2 from "../components/marquee2.astro";
     </div>
     <h2 class="text-center p-10 text-white">Learn more about</h2>
     <p class="text-6xl md:text-8xl text-brandcolor text-center">INSTANT DAY</p>
-    <img src="/arrow.png" alt="billede 2" class="w-10 mx-auto lg:mx-0 m-4" />
+    <img src="/arrow.png" alt="billede 2" class="w-10 mx-auto py-10" />
   </div>
 
   <div class="bg-primarycol relative p-6 m-6">
     <section>
-      <h2 class="text-white">How to</h2>
-      <h2 class="text-brandcolor">participate</h2>
+      <h2 class="text-white">
+        How to <span class="text-brandcolor">participate</span>
+      </h2>
+
       <p class="text-white">
         Got an instant photo ready for the public? In order to take part in
         Instant Day:
@@ -80,6 +82,9 @@ import Marquee2 from "../components/marquee2.astro";
           instants” side]
         </p>
       </div>
+      <div class="col-span-2 block md:hidden -mx-12 py-35">
+        <Marquee2 />
+      </div>
       <div>
         <div>
           <div class="flex flex-col items-center">
@@ -116,5 +121,64 @@ import Marquee2 from "../components/marquee2.astro";
       </div>
     </section>
   </div>
-  <Marquee2 />
+  <div class="hidden md:block mt-8">
+    <Marquee2 />
+  </div>
+  <section class="p-6">
+    <div class="bg-primarycol">
+      <section class="md:grid grid-cols-3">
+        <div class="md:col-span-2 p-6">
+          <div>
+            <h2 class="text-white p-6">
+              Why instant <span class="text-brandcolor">photography</span>?
+            </h2>
+            <p class="text-white p-6">
+              Instant Photography is a testament to life: It all started back in
+              the 1940’s with a 3 year old kid. She wanted to see her fathers
+              images right away. The father, Edwin Land, embarked on a mission:
+              To invent instant photography. Half a decade later, Edwin Land
+              launched Instant photography and established the Polaroid brand.
+              Instant photography turned into big business in the 70’s and 80’s,
+              until the digital era almost killed the industry. The massive
+              amount of time wasted on the small screens have spurred a
+              counterreaction: Analogue, off-line experiences have become
+              popular again. And instant photography is just that: An analogue,
+              life-affirming and tactile photography experience. So let’s
+              celebrate life, and make memories:-)
+            </p>
+          </div>
+          <div class="md:grid grid-cols-3">
+            <div>
+              <img
+                src="/gal-img-29.webp"
+                alt="billede 2"
+                class="w-50 mx-auto hidden md:block mt-8 md:w-30"
+              />
+            </div>
+            <div>
+              <img
+                src="/gal-img-30.webp"
+                alt="billede 2"
+                class="w-50 mx-auto hidden md:block mt-8 md:w-30"
+              />
+            </div>
+            <div>
+              <img
+                src="/gal-img-26.webp"
+                alt="billede 2"
+                class="w-50 mx-auto mt-8 md:w-30"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="border-2 border-brandcolor">
+          <img
+            src="/polaroidcamera.jpg"
+            alt="billede 2"
+            class="w-full h-full object-cover"
+          />
+        </div>
+      </section>
+    </div>
+  </section>
 </MainLayout>
