@@ -5,11 +5,14 @@ import "../styles/tailwind.css";
 <div class="overflow-hidden whitespace-nowrap text-white">
   <div
     class="inline-block animate-marquee"
-    style={`animation-delay: ${Math.random() * 10}s`}
+    style={`animation-delay: ${Math.random() * 3}s`}
   >
     <p class="text-4xl text-white">
-      OPEN CALL <span class="text-brandcolor">OPEN CALL</span> OPEN CALL OPEN CALL
-      OPEN CALL OPEN CALL.
+      OPEN CALL <a href="/share">
+        <span class="text-brandcolor hover:text-6xl">OPEN CALL</span></a
+      > OPEN CALL OPEN CALL <a href="/share">
+        <span class="text-brandcolor hover:text-6xl">OPEN CALL</span></a
+      > OPEN CALL.
     </p>
   </div>
 </div>
