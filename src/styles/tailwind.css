@@ -56,6 +56,10 @@
     font-size: 16px;
     font-weight: 600;
   }
+  .cta-tekst-lille {
+    font-size: 16px;
+    font-weight: 600;
+  }
 
   @media (min-width: 800px) {
     p {
@@ -70,9 +74,7 @@
     h3 {
       font-size: clamp(18px, 3vw, 24px);
     }
-    .cta-tekst {
-      font-size: clamp(28px, 5vw, 36px);
-    }
+
     .nav-bar-tekst {
       font-size: clamp(18px, 2vw, 24px);
     }
