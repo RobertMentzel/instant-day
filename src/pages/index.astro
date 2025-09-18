@@ -10,12 +10,11 @@ import Marquee2 from "../components/marquee2.astro";
 ---
 
 <MainLayout title="Instant Day">
-  <div class="min h-screen bg-primarycol relative">
+  <div class="min h-230 bg-primarycol relative">
     <div
       class="absolute top-0 left-0 w-full flex flex-col items-center lg:flex-row lg:justify-center lg:gap-6 p-4"
     >
       <img src="/forside1.png" alt="billede 1" class="w-80 mx-auto lg:mx-0" />
-
       <img src="/forside2.png" alt="billede 2" class="w-80 hidden lg:block" />
       <img src="/forside3.png" alt="billede 3" class="w-80 hidden lg:block" />
     </div>
@@ -32,12 +31,18 @@ import Marquee2 from "../components/marquee2.astro";
       <Marquee />
       <Marquee />
     </div>
-    <h2 class="text-center p-10 text-white">Learn more about</h2>
-    <p class="text-6xl md:text-8xl text-brandcolor text-center">INSTANT DAY</p>
-    <img src="/arrow.png" alt="billede 2" class="w-10 mx-auto py-10" />
+    <h2 class="text-center p-10 text-white">More info about</h2>
+    <p class="text-6xl md:text-7xl text-brandcolor text-center">INSTANT DAY</p>
+    <img
+      src="/arrow.png"
+      alt="billede 2"
+      class="w-13 mx-auto mt-10 lg:py-10 shake-vertical"
+    />
   </div>
 
-  <div class="bg-primarycol relative p-6 m-6">
+  <div
+    class="bg-primarycol relative p-6 m-6 intersect:animate-fade-down intersect:animate-duration-[2500ms]"
+  >
     <section>
       <h2 class="text-white">
         How to <span class="text-brandcolor">participate</span>
@@ -49,7 +54,7 @@ import Marquee2 from "../components/marquee2.astro";
       </p>
     </section>
     <section
-      class="grid grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-4 gap-6"
+      class="grid grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-4 gap-6 intersect:animate-fade-down intersect:animate-duration-[2500ms]"
     >
       <div>
         <div class="flex flex-col items-center">
@@ -85,7 +90,9 @@ import Marquee2 from "../components/marquee2.astro";
       <div class="col-span-2 block md:hidden -mx-12 py-35">
         <Marquee2 />
       </div>
-      <div>
+      <div
+        class="intersect:animate-fade-down intersect:animate-duration-[2500ms]"
+      >
         <div>
           <div class="flex flex-col items-center">
             <img
@@ -103,7 +110,9 @@ import Marquee2 from "../components/marquee2.astro";
           contest.
         </p>
       </div>
-      <div class="mt-15">
+      <div
+        class="mt-15 intersect:animate-fade-down intersect:animate-duration-[2500ms]"
+      >
         <div>
           <div class="flex flex-col items-center">
             <img
@@ -125,7 +134,9 @@ import Marquee2 from "../components/marquee2.astro";
     <Marquee2 />
   </div>
   <section class="p-6">
-    <div class="bg-primarycol">
+    <div
+      class="bg-primarycol intersect:animate-fade-down intersect:animate-duration-[2500ms]"
+    >
       <section class="md:grid grid-cols-3">
         <div class="md:col-span-2 p-6">
           <div>
