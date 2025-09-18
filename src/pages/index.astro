@@ -7,6 +7,7 @@ import thumbsup from "../assets/images/thumbsup.png";
 import "../styles/tailwind.css";
 import Marquee from "../components/marquee.astro";
 import Marquee2 from "../components/marquee2.astro";
+import CTA from "../components/CTA.astro";
 ---
 
 <MainLayout title="Instant Day">
@@ -83,9 +84,11 @@ import Marquee2 from "../components/marquee2.astro";
         </div>
         <h3 class="text-white m-6">Step 2</h3>
         <p class="text-white ml-6">
-          Upload your photo and credentials on [link til din “share your
-          instants” side]
+          Upload your photo and credentials on the "share" page.
         </p>
+        <div class="mt-6">
+          <CTA />
+        </div>
       </div>
       <div class="col-span-2 block md:hidden -mx-12 py-35">
         <Marquee2 />
